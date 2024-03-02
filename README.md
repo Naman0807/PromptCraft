@@ -44,7 +44,6 @@ Follow these steps to get started with PromptCraft:
 
    ```bash
    git clone https://github.com/Naman0807/PromptCraft.git
-  bash```
 
 2. Open the index.html file in your web browser.
 
@@ -52,16 +51,16 @@ Follow these steps to get started with PromptCraft:
 ## Contributing
 If you'd like to contribute to PromptCraft, please follow these steps:
 
-  # Fork the repository.
+  ### Fork the repository.
     git clone https://github.com/Naman0807/PromptCraft.git
     cd PromptCraft
-  # Create a new branch for your feature:
+  ### Create a new branch for your feature:
     git checkout -b feature-name
-  # Commit your changes:
+  ### Commit your changes:
     git commit -m 'Add some feature'
-  # Push to the branch:
+  ### Push to the branch:
     git push origin feature-name
-  # Submit a pull request.
+  ### Submit a pull request.
 
 
 ## Contact
