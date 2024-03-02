@@ -64,7 +64,7 @@ If you'd like to contribute to PromptCraft, please follow these steps:
 
 
 ## Contact
-Author: Your Name
-GitHub: [Naman0807](https://github.com/Naman0807)
-LinkedIn:[Naman Parmar](https://www.linkedin.com/in/namanparmar/)
-Instagram: [Naman_080](https://www.instagram.com/naman_080/)
+Author: Naman Parmar
+[GitHub](https://github.com/Naman0807)
+[LinkedIn](https://www.linkedin.com/in/namanparmar/)
+[Instagram](https://www.instagram.com/naman_080/)
