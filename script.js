@@ -132,7 +132,14 @@ const updateLanguageOptions = () => {
 			addLanguageOptions(["HTML", "Tailwind", "BootStrap"]);
 			break;
 		case "function":
-			addLanguageOptions(["JavaScript", "Python", "Java"]);
+			addLanguageOptions([
+				"JavaScript",
+				"Python",
+				"Java",
+				"Ruby",
+				"Swift",
+				"C#",
+			]);
 			break;
 		case "database":
 			addLanguageOptions(["MongoDB", "MySQL"]);
