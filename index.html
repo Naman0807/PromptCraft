@@ -9,27 +9,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
 
 <body class="bg-gray-100 font-sans">
 
-    <header class="bg-blue-700 text-white p-4">
-        <div class="container mx-auto flex items-center justify-between">
-            <h1 class="text-2xl font-bold">PromptCraft</h1>
-            <nav role="navigation">
+    <header class="bg-blue-700 text-white p-4 animate__animated animate__fadeInDown delay-500">
+        <div class="container mx-auto flex items-center">
+            <!-- Logo -->
+            <a href="./index.html"><img src="./img/logo.png" class="h-12 w-12" alt="Logo"></a>
+
+            <!-- Title -->
+            <a href="./index.html">
+                <h1 class="text-2xl font-bold ml-2">PromptCraft</h1>
+            </a>
+
+            <!-- Navigation -->
+            <nav role="navigation" class="ml-auto">
                 <ul class="flex space-x-4">
-                    <li><a target="_blank" href="https://www.instagram.com/naman_080/" class="text-white text-xl"
+                    <li><a target="_blank" href="https://www.instagram.com/naman_080/" class="text-white text-2xl"
                             aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a target="_blank" href="https://github.com/Naman0807" class="text-white text-xl"
+                    <li><a target="_blank" href="https://github.com/Naman0807" class="text-white text-2xl"
                             aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/namanparmar/" class="text-white text-xl"
+                    <li><a target="_blank" href="https://www.linkedin.com/in/namanparmar/" class="text-white text-2xl"
                             aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="bg-gray-800 text-white p-4">
+    <div class="bg-gray-800 text-white p-4 animate__animated animate__fadeInDown delay-500">
         <div class="container mx-auto text-center">
             <p class="text-lg font-medium">
                 Welcome to PromptCraft - Your Coding Prompt Generator! Generate custom coding prompts based on language,
@@ -38,12 +48,17 @@
         </div>
     </div>
 
+
     <div class="container mx-auto p-4 sm:p-8 bg-gray-200 rounded-lg mt-4">
 
-        <h2 class="text-4xl font-bold mb-8 text-gray-800">Welcome to PromptCraft</h2>
+        <h2 class="text-4xl font-bold mb-8 text-gray-800 animate__animated animate__fadeInDown delay-1000">
+            Welcome to PromptCraft
+        </h2>
+
 
         <!-- Coding Prompt Generator Section (JavaScript for interactivity) -->
-        <section id="prompt-generator" class="mb-8 bg-white p-8 rounded shadow-md">
+        <section id="prompt-generator"
+            class="mb-8 bg-white p-8 rounded shadow-md animate__animated animate__fadeIn delay-500">
             <h3 class="text-2xl font-bold mb-4 text-gray-800">Coding Prompt Generator</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -53,7 +68,6 @@
                         <option value="website">Website</option>
                         <option value="function">Function</option>
                         <option value="database">Database schema</option>
-                        <!-- Add more categories as needed -->
                     </select>
                 </div>
 
@@ -63,43 +77,36 @@
                     <select id="language"
                         class="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:border-blue-500">
                         <option value="HTML">HTML</option>
-                        <option value="JavaScript">JavaScript</option>
-                        <option value="Python">Python</option>
-                        <option value="Java">Java</option>
-                        <option value="C#">C#</option>
-                        <option value="PHP">PHP</option>
-                        <option value="Ruby">Ruby</option>
-                        <option value="MongoDB">MongoDB</option>
-                        <option value="MySQL">MySQL</option>
-                        <option value="Tailwind">Tailwind</option>
                     </select>
                 </div>
                 <div>
                     <label for="task" class="block text-sm font-medium text-gray-700">What you want to
                         do:</label>
-                    <input type="text" id="task"
+                    <input placeholder="Eg. Make a api call" type="text" id="task"
                         class="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:border-blue-500">
                 </div>
                 <div>
                     <label for="action" class="block text-sm font-medium text-gray-700"> Describe:</label>
-                    <input type="text" id="action"
+                    <input placeholder="Eg. For the Weather" type="text" id="action"
                         class="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:border-blue-500">
                 </div>
                 <div>
                     <label for="additional-details" class="block text-sm font-medium text-gray-700">Additional
                         Details (if any):</label>
-                    <textarea id="additional-details"
+                    <textarea placeholder="Add any specific details..." id="additional-details"
                         class="mt-1 p-2 border border-gray-300 rounded resize-none w-full focus:outline-none focus:border-blue-500"></textarea>
                 </div>
             </div>
 
             <div class="space-x-2">
                 <button id="generate-custom-prompt" type="button"
-                    class="mt-8 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">Generate</button>
+                    class="mt-8 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transform hover:scale-105 transition duration-300 delay-200 focus:outline-none focus:shadow-outline-blue">Generate</button>
+
                 <button id="copy-to-clipboard" type="button"
-                    class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 focus:outline-none focus:shadow-outline-green">Copy</button>
+                    class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 transform hover:scale-105 transition duration-300 delay-200 focus:outline-none focus:shadow-outline-green">Copy</button>
+
                 <button id="clear-fields" type="button"
-                    class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 focus:outline-none focus:shadow-outline-red">Clear</button>
+                    class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 transform hover:scale-105 transition duration-300 delay-200 focus:outline-none focus:shadow-outline-red">Clear</button>
             </div>
 
 
@@ -109,105 +116,8 @@
         </section>
     </div>
 
-    <script>
-        const generateCustomPrompt = () => {
-            const language = document.getElementById('language').value;
-            const category = document.getElementById('category').value;
-            const task = document.getElementById('task').value;
-            const action = document.getElementById('action').value;
-            const additionalDetails = document.getElementById('additional-details').value;
 
-            if (language && category && task && action) {
-                let prompt;
-
-                switch (category) {
-                    case 'website':
-                        prompt = generateWebsitePrompt(language, task, action, additionalDetails);
-                        break;
-                    case 'function':
-                        prompt = generateFunctionPrompt(language, task, action, additionalDetails);
-                        break;
-                    case 'database':
-                        prompt = generateDatabasePrompt(language, task, action, additionalDetails);
-                        break;
-                    // Add more cases for other categories as needed
-                    default:
-                        return "Invalid category";
-                }
-
-                return prompt;
-            } else {
-                return "Please fill in all required fields.";
-            }
-        };
-
-        const generateWebsitePrompt = (language, task, action, additionalDetails) => {
-            const templates = [
-                `Create a ${language} website that ${task}. Make sure the website ${action}.`,
-                `Design a responsive ${language} website to ${task}. Ensure smooth ${action}.`,
-                `Implement a ${language} web application that ${task}. Pay attention to ${action}.`,
-                // Add more website prompts
-            ];
-
-            return getRandomPrompt(templates, additionalDetails);
-        };
-
-        const generateFunctionPrompt = (language, task, action, additionalDetails) => {
-            const templates = [
-                `Write a ${language} function to ${task}. Ensure that the function ${action}.`,
-                `Implement a ${language} function that ${task}. Focus on ${action}.`,
-                `Develop a ${language} module with a function to ${task}. Make sure ${action}.`,
-                // Add more function prompts
-            ];
-
-            return getRandomPrompt(templates, additionalDetails);
-        };
-
-        const generateDatabasePrompt = (language, task, action, additionalDetails) => {
-            const templates = [
-                `Design a ${language} database schema for ${task}. Ensure it supports ${action}.`,
-                `Implement a ${language} database solution to ${task}. Pay attention to ${action}.`,
-                `Optimize the ${task} database using ${language}. Ensure ${action} is efficient.`,
-                // Add more database prompts
-            ];
-
-            return getRandomPrompt(templates, additionalDetails);
-        };
-
-        // Helper function to get a random prompt from the provided array
-        const getRandomPrompt = (templates, additionalDetails) => {
-            const randomIndex = Math.floor(Math.random() * templates.length);
-            let prompt = templates[randomIndex];
-
-            if (additionalDetails) {
-                prompt += `\n\nAdditional Details:\n${additionalDetails}`;
-            }
-
-            return prompt;
-        };
-
-        // Event listener for the "Generate" button
-        document.getElementById('generate-custom-prompt').addEventListener('click', () => {
-            const customPromptResult = generateCustomPrompt();
-            document.getElementById('custom-prompt-result').textContent = customPromptResult;
-        });
-
-        document.getElementById('copy-to-clipboard').addEventListener('click', () => {
-            const customPromptResult = document.getElementById('custom-prompt-result').textContent;
-            navigator.clipboard.writeText(customPromptResult)
-                .then(() => alert('Prompt copied to clipboard!'))
-                .catch((err) => console.error('Unable to copy to clipboard', err));
-        });
-
-        document.getElementById('clear-fields').addEventListener('click', () => {
-            document.getElementById('task').value = '';
-            document.getElementById('action').value = '';
-            document.getElementById('additional-details').value = '';
-            document.getElementById('custom-prompt-result').textContent = '';
-        });
-
-    </script>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
