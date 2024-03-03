@@ -106,10 +106,36 @@ document.getElementById("copy-to-clipboard").addEventListener("click", () => {
 	const customPromptResult = document.getElementById(
 		"custom-prompt-result"
 	).textContent;
-	navigator.clipboard
-		.writeText(customPromptResult)
-		.then(() => alert("Prompt copied to clipboard!"))
-		.catch((err) => console.error("Unable to copy to clipboard", err));
+
+	const acknowledgmentElement = document.getElementById("copy-acknowledgment");
+
+	if (customPromptResult.trim() !== "") {
+		navigator.clipboard
+			.writeText(customPromptResult)
+			.then(() => {
+				acknowledgmentElement.textContent = "Prompt copied to clipboard!";
+				acknowledgmentElement.classList.remove("text-red-400");
+				acknowledgmentElement.classList.add("text-green-500");
+				setTimeout(() => {
+					acknowledgmentElement.textContent = "";
+				}, 3000);
+			})
+			.catch((err) => {
+				acknowledgmentElement.textContent = "Unable to Copy";
+				acknowledgmentElement.classList.remove("text-green-500");
+				acknowledgmentElement.classList.add("text-red-400");
+				setTimeout(() => {
+					acknowledgmentElement.textContent = "";
+				}, 3000);
+			});
+	} else {
+		acknowledgmentElement.textContent = "Cannot copy an empty prompt!";
+		acknowledgmentElement.classList.remove("text-green-500");
+		acknowledgmentElement.classList.add("text-red-400");
+		setTimeout(() => {
+			acknowledgmentElement.textContent = "";
+		}, 3000);
+	}
 });
 
 document.getElementById("clear-fields").addEventListener("click", () => {
