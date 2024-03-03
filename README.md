@@ -8,7 +8,6 @@ PromptCraft is a web application that generates custom coding prompts based on l
 - [Features](#features)
 - [Usage](#usage)
 - [How it Works](#how-it-works)
-- [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
