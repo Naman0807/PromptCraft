@@ -11,7 +11,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-
 </head>
 
 <body class="bg-gray-100 font-sans">
@@ -29,12 +28,15 @@
             <!-- Navigation -->
             <nav role="navigation" class="ml-auto">
                 <ul class="flex space-x-4">
-                    <li><a target="_blank" href="https://www.instagram.com/naman_080/" class="text-white text-2xl"
-                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a target="_blank" href="https://github.com/Naman0807" class="text-white text-2xl"
-                            aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/namanparmar/" class="text-white text-2xl"
-                            aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/naman_080/"
+                            class="text-white hover:text-yellow-400 text-2xl" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/Naman0807"
+                            class="text-white hover:text-yellow-400 text-2xl" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/namanparmar/"
+                            class="text-white hover:text-yellow-400 text-2xl" aria-label="LinkedIn"><i
+                                class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -78,6 +80,8 @@
                     <select id="language"
                         class="mt-1 p-2 border border-gray-300 rounded w-full focus:outline-none focus:border-blue-500">
                         <option value="HTML">HTML</option>
+                        <option value="Tailwind">Tailwind</option>
+                        <option value="BootStrap">BootStrap</option>
                     </select>
                 </div>
                 <div>
@@ -110,13 +114,16 @@
                     class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 transform hover:scale-105 transition duration-300 delay-200 focus:outline-none focus:shadow-outline-red">Clear</button>
             </div>
 
-            <p id="copy-acknowledgment" class="text-green-500"></p>
+            <p id="copy-acknowledgment" class="mt-2 text-green-500"></p>
 
             <div class="col-span-2">
                 <p id="custom-prompt-result" class="mt-6 font-bold break-words text-gray-800"></p>
             </div>
         </section>
     </div>
+    <footer class="bg-gray-700 text-white p-4 text-center">
+        <p>&copy; 2024 PromptCraft. All rights reserved.</p>
+    </footer>
 
     <script src="./script.js"></script>
 </body>

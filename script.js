@@ -49,7 +49,6 @@ const generateWebsitePrompt = (language, task, action, additionalDetails) => {
 		`Create a ${language} website that ${task}. Make sure the website ${action}.`,
 		`Design a responsive ${language} website to ${task}. Ensure smooth ${action}.`,
 		`Implement a ${language} web application that ${task}. Pay attention to ${action}.`,
-		// Add more website prompts
 	];
 
 	return getRandomPrompt(templates, additionalDetails);
@@ -62,7 +61,6 @@ const generateFunctionPrompt = (language, task, action, additionalDetails) => {
 		`Develop a ${language} module with a function to ${task}. Make sure ${action}.`,
 		`Create a reusable ${language} function for ${task}. Pay attention to ${action} and code readability.`,
 		`Build a ${language} function that performs ${task}. Consider ${action} and error handling.`,
-		// Add more function prompts as needed
 	];
 
 	return getRandomPrompt(templates, additionalDetails);
@@ -75,13 +73,11 @@ const generateDatabasePrompt = (language, task, action, additionalDetails) => {
 		`Develop a scalable ${language} database schema for ${task}. Consider ${action} and future expansion.`,
 		`Implement a relational ${language} database schema to support ${task}. Focus on optimizing ${action}.`,
 		`Design an efficient ${language} database schema for ${task}. Ensure it can handle ${action} gracefully.`,
-		// Add more database schema prompts as needed
 	];
 
 	return getRandomPrompt(templates, additionalDetails);
 };
 
-// Helper function to get a random prompt from the provided array
 const getRandomPrompt = (templates, additionalDetails) => {
 	const randomIndex = Math.floor(Math.random() * templates.length);
 	let prompt = templates[randomIndex];
@@ -93,7 +89,6 @@ const getRandomPrompt = (templates, additionalDetails) => {
 	return prompt;
 };
 
-// Event listener for the "Generate" button
 document
 	.getElementById("generate-custom-prompt")
 	.addEventListener("click", () => {
@@ -149,10 +144,8 @@ const updateLanguageOptions = () => {
 	const category = document.getElementById("category").value;
 	const languageDropdown = document.getElementById("language");
 
-	// Clear existing options
 	languageDropdown.innerHTML = "";
 
-	// Set language options based on the selected category
 	switch (category) {
 		case "website":
 			addLanguageOptions(["HTML", "Tailwind", "BootStrap"]);
@@ -175,7 +168,6 @@ const updateLanguageOptions = () => {
 	}
 };
 
-// Helper function to add language options to the language dropdown
 const addLanguageOptions = (languages) => {
 	const languageDropdown = document.getElementById("language");
 	languages.forEach((language) => {
@@ -186,34 +178,27 @@ const addLanguageOptions = (languages) => {
 	});
 };
 
-// Event listener for category change
 document
 	.getElementById("category")
 	.addEventListener("change", updateLanguageOptions);
 
 document.addEventListener("DOMContentLoaded", function () {
-	// Get the select element for the category
 	var categorySelect = document.getElementById("category");
 
-	// Get the input element for the task
 	var taskInput = document.getElementById("task");
 
-	// Define placeholder options based on categories
 	var placeholders = {
 		website: "Eg. Create a landing page",
 		function: "Eg. API Call",
 		database: "Eg. Design a user authentication system",
 	};
 
-	// Function to update the task input placeholder based on the selected category
 	function updatePlaceholder() {
 		var selectedCategory = categorySelect.value;
 		taskInput.placeholder = placeholders[selectedCategory] || "";
 	}
 
-	// Add an event listener to the category select to update the placeholder on change
 	categorySelect.addEventListener("change", updatePlaceholder);
 
-	// Call the function initially to set the initial placeholder
 	updatePlaceholder();
 });
