@@ -1,0 +1,1 @@
+PromptCraft is an AI-powered prompt maker and coding prompt generator designed to help developers create custom programming exercises. Generate tailored prompts for HTML, JavaScript, React, Next.js, Python and more. Perfect for developers of all skill levels looking to practice and improve their programming skills.

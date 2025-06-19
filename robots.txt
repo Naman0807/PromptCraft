@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: prompt-craft-llmtools.vercel.app/sitemap.xml
