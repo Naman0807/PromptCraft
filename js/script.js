@@ -204,15 +204,6 @@ async function callGeminiAPI(apiKey, prompt) {
 	return data.candidates[0].content.parts[0].text;
 }
 
-	if (!response.ok) {
-		throw new Error(
-			"Failed to generate prompt. Please check your API key and try again."
-		);
-	}
-
-	const data = await response.json();
-	return data.candidates[0].content.parts[0].text;
-
 // Display result
 function displayResult(text) {
 	// Convert markdown to HTML (basic conversion)
