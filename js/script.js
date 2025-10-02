@@ -170,7 +170,7 @@ function constructPrompt() {
 async function callGeminiAPI(apiKey, prompt) {
 	const response = await fetch(
 		// The model name in the URL has been updated
-		`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+		`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
 		{
 			method: "POST",
 			headers: {
