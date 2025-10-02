@@ -162,7 +162,7 @@ Generate a response in the following exact format. Use only the sections specifi
 ---
 
 # [Project Title]
-A clear, concise title for the project.
+A clear, concise title for the project. Add a Name as well.
 
 ## Description
 A 2-3 sentence overview of what will be built.
