@@ -169,8 +169,8 @@ function constructPrompt() {
 // Call Gemini API
 async function callGeminiAPI(apiKey, prompt) {
 	const response = await fetch(
-        // The model name in the URL has been updated
-		`https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+		// The model name in the URL has been updated
+		`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
 		{
 			method: "POST",
 			headers: {
@@ -179,6 +179,7 @@ async function callGeminiAPI(apiKey, prompt) {
 			body: JSON.stringify({
 				contents: [
 					{
+						role: "user",
 						parts: [
 							{
 								text: prompt,
@@ -187,7 +188,7 @@ async function callGeminiAPI(apiKey, prompt) {
 					},
 				],
 				generationConfig: {
-                    // Increased token limit to allow for more detailed responses
+					temperature: 0.7,
 					maxOutputTokens: 8192,
 				},
 			}),
