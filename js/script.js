@@ -166,9 +166,11 @@ function constructPrompt() {
 }
 
 // Call Gemini API
+// Call Gemini API
 async function callGeminiAPI(apiKey, prompt) {
 	const response = await fetch(
-		`https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+        // The model name in the URL has been updated
+		`https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
 		{
 			method: "POST",
 			headers: {
@@ -185,11 +187,22 @@ async function callGeminiAPI(apiKey, prompt) {
 					},
 				],
 				generationConfig: {
-					maxOutputTokens: 2048,
+                    // Increased token limit to allow for more detailed responses
+					maxOutputTokens: 8192,
 				},
 			}),
 		}
 	);
+
+	if (!response.ok) {
+		throw new Error(
+			"Failed to generate prompt. Please check your API key and try again."
+		);
+	}
+
+	const data = await response.json();
+	return data.candidates[0].content.parts[0].text;
+}
 
 	if (!response.ok) {
 		throw new Error(
