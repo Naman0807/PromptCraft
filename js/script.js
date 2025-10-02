@@ -168,7 +168,7 @@ A clear, concise title for the project. Add a Name as well.
 A 2-3 sentence overview of what will be built.
 
 ## Core Requirements
-- [List 3-5 must-have features or functionalities]
+- [List 4-5 must-have features or functionalities]
 
 ## Technical Specifications
 ### Technology Stack:
