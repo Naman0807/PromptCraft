@@ -107,32 +107,7 @@ categorySelect.addEventListener("change", function () {
 	});
 });
 
-// Generate prompt
-generateButton.addEventListener("click", async function () {
-	const apiKey = apiKeyInput.value.trim();
-	if (!apiKey) {
-		showError("Please enter your Gemini API key");
-		return;
-	}
-	disableAllFields(true);
-	// Show loading state
-	resultDiv.innerHTML = `
-        <div class="animate-pulse">
-            <div class="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
-            <div class="h-4 bg-gray-200 rounded w-1/2"></div>
-        </div>
-    `;
-
-	try {
-		const promptText = constructPrompt();
-		const response = await callGeminiAPI(apiKey, promptText);
-		displayResult(response);
-	} catch (error) {
-		showError(error.message);
-	} finally {
-		disableAllFields(false);
-	}
-});
+// Generate prompt function is now handled in validation.js
 
 // Construct prompt text
 function constructPrompt() {
